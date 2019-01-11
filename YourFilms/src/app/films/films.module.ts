@@ -8,6 +8,7 @@ import { ViewComponent } from './view/view.component';
   declarations: [IndexComponent, SingleComponent, ViewComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [IndexComponent, ViewComponent]
 })
 export class FilmsModule { }

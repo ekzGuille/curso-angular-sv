@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Film } from '../film';
 
 @Component({
   selector: 'app-index',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  films: Film[];
+  film: Film;
+
+  constructor() {
+    this.films = [];
+  }
+
+  view(film: Film): void {
+    this.film = film;
+  }
+  reset(): void {
+    this.film = undefined;
+  }
+  ver(): void {
+    
+  }
 
   ngOnInit() {
   }
