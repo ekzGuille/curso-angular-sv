@@ -1,13 +1,13 @@
 <table style="width:360px;display: inline-block; float:none; padding:5px; vertical-align: text-top">
   <tr>
     <td>
-      <h2>{{filmInput.name}} <button (click)=view(filmInput)>Ver</button></h2>
+      <h2 style="text-align: center">{{filmInput.name}} <button (click)=view(filmInput)>Ver</button></h2>
     </td>
   </tr>
   <tr>
     <td>
-      <img [src]="filmInput.images[0]" width="100%" />
+      <img [src]="filmInput.images[0]" width="100%" style="border-radius: 5px" />
     </td>
   </tr>
-  <tr>{{filmInput.description}}</tr>
+<tr style="text-align: justify">{{filmInput.description}}</tr>
 </table>
