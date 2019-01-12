@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-multiplicar',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultiplicarComponent implements OnInit {
 
+  @Input() valorHijo1: number;
+  @Input() valorHijo2: number;
+  @Output() restultEvent = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  operar() {
+    this.restultEvent.emit(this.valorHijo1 * this.valorHijo2);
   }
 
 }

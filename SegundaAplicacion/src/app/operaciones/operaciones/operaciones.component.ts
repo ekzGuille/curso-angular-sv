@@ -16,8 +16,13 @@ export class OperacionesComponent implements OnInit {
   ngOnInit() {
   }
 
-  obtenerResultado(): void {
-
+  obtenerResultado(resultado: number): void {
+    console.log(resultado);
+    this.resultado = resultado;
   }
+  // obtenerResultado = function(resultado: number): void {
+  //   console.log(resultado);
+  //   this.resultado = resultado;
+  // }
 
 }
