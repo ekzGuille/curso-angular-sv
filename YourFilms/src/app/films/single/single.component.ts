@@ -18,4 +18,6 @@ export class SingleComponent implements OnInit {
   view(film:Film){
     this.viewEvent.emit(film);
   }
+
+  
 }

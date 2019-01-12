@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { UIModule } from './ui/ui.module';
 import { FilmsModule } from './films/films.module';
 import { AccountsModule } from './accounts/accounts.module';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { routes } from './app.routes'; 
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -16,7 +18,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     UIModule,
     FilmsModule,
-    AccountsModule
+    AccountsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
