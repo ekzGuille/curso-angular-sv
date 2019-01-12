@@ -1,0 +1,17 @@
+<h3>Haz tus operaciones</h3>
+
+<!-- <button (click)="hacerOperacion('sumar')">Sumar</button>
+<button (click)="hacerOperacion('restar')">Restar</button>
+<button (click)="hacerOperacion('multiplicar')">Multiplicar</button>
+<button (click)="hacerOperacion('dividir')">Dividir</button> -->
+<br>
+<br>
+<input type="number" placeholder="valor 1" min="1" [(ngModel)]="valorPadre1">
+<br>
+<input type="number" placeholder="valor 2" min="1" [(ngModel)]="valorPadre2">
+<br>
+<br>
+<button>Mostrar resultado</button>
+<h3 *ngIf="resultado">  Resultado: {{resultado}}</h3>
+
+<app-sumar [valorHijo1]='valorPadre1' [valorHijo2]='valorPadre2'></app-sumar>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sumar',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SumarComponent implements OnInit {
 
+  @Input() valorHijo1: number;
+  @Input() valorHijo2: number;
   constructor() { }
 
   ngOnInit() {

@@ -4,11 +4,15 @@ import { SumarComponent } from './sumar/sumar.component';
 import { RestarComponent } from './restar/restar.component';
 import { MultiplicarComponent } from './multiplicar/multiplicar.component';
 import { DividirComponent } from './dividir/dividir.component';
+import { OperacionesComponent } from './operaciones/operaciones.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [SumarComponent, RestarComponent, MultiplicarComponent, DividirComponent],
+  declarations: [SumarComponent, RestarComponent, MultiplicarComponent, DividirComponent, OperacionesComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule
+  ],
+  exports: [OperacionesComponent]
 })
 export class OperacionesModule { }
