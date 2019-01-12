@@ -13,7 +13,9 @@ export class SingleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.viewEvent.emit(this.filmInput);
   }
 
+  view(film:Film){
+    this.viewEvent.emit(film);
+  }
 }
