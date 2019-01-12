@@ -17,12 +17,7 @@ export class OperacionesComponent implements OnInit {
   }
 
   obtenerResultado(resultado: number): void {
-    console.log(resultado);
     this.resultado = resultado;
   }
-  // obtenerResultado = function(resultado: number): void {
-  //   console.log(resultado);
-  //   this.resultado = resultado;
-  // }
 
 }

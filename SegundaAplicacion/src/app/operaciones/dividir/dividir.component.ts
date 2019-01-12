@@ -9,13 +9,13 @@ export class DividirComponent implements OnInit {
 
   @Input() valorHijo1: number;
   @Input() valorHijo2: number;
-  @Output() restultEvent = new EventEmitter<number>();
+  @Output() resultEvent = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit() {
   }
 
   operar() {
-    this.restultEvent.emit(this.valorHijo1 + this.valorHijo2);
+    this.resultEvent.emit(this.valorHijo1 / this.valorHijo2);
   }
 }
