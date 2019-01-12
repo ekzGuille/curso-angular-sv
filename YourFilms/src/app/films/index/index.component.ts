@@ -12,7 +12,7 @@ export class IndexComponent implements OnInit {
   film: Film;
 
   constructor() {
-    this.films = 
+    this.films = null;
   }
   view(film: Film) { this.film = film; }
   reset() { this.film = undefined; }
