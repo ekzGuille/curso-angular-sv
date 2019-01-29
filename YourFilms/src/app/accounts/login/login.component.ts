@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AccountService } from "../account.service";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -8,11 +10,15 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
 
-  login(): void {
-    console.log(`Login de Usuario ${this.username} Password ${this.password}`);
-  }
-
-  constructor() {}
+  constructor(private router: Router, private accountService: AccountService) {}
 
   ngOnInit() {}
+
+  login(): void {
+    if (!this.accountService.login(this.username, this.password)) {
+      alert("Error al hacer el login");
+    } else {
+      this.router.navigate(["Index"]);
+    }
+  }
 }

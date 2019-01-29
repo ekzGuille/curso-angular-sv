@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Film } from "../film";
+import { Router } from '@angular/router';
+import { FilmService } from '../film.service';
 
 @Component({
   selector: "app-index",
@@ -10,8 +12,8 @@ export class IndexComponent implements OnInit {
   films: Film[];
   film: Film;
 
-  constructor() {
-    this.films = null;
+  constructor(private router:Router, private filmService:FilmService) {
+    this.films = filmService.getAll();
   }
   view(film: Film) {
     this.film = film;
@@ -20,7 +22,7 @@ export class IndexComponent implements OnInit {
     this.film = undefined;
   }
   ver(id: number) {
-    console.log("Ver película:" + id);
+    this.router.navigate(["View",id]);
   }
 
   ngOnInit() {}

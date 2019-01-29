@@ -6,6 +6,7 @@ import { AccountsModule } from "./accounts/accounts.module";
 import { FormsModule } from "@angular/forms";
 import { routes } from "./app.routes";
 import { RouterModule, Routes } from "@angular/router";
+import { YoutubePlayerModule } from "ngx-youtube-player";
 
 import { AppComponent } from "./app.component";
 
@@ -17,7 +18,8 @@ import { AppComponent } from "./app.component";
     UIModule,
     FilmsModule,
     AccountsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    YoutubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

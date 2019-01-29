@@ -1,1 +1,11 @@
-<p>view works!</p>
+<div *ngIf="accountService.token === null">
+  Para ver un video necesitas estar autenticado
+</div>
+
+<div *ngIf="accountService.token !== null">
+  <youtube-player
+    [videoId]="video"
+    (ready)="savePlayer($event)"
+    (change)="onStateChange($event)"
+  ></youtube-player>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AccountService } from "../account.service";
 
 @Component({
   selector: "app-register",
@@ -9,13 +11,15 @@ export class RegisterComponent implements OnInit {
   username: string;
   password: string;
 
-  register(): void {
-    console.log(
-      `Register de Usuario ${this.username} Password ${this.password}`
-    );
-  }
-
-  constructor() {}
+  constructor(private router: Router, private accountService: AccountService) {}
 
   ngOnInit() {}
+
+  register(): void {
+    if (!this.accountService.login(this.username, this.password)) {
+      alert("Error al registrarse");
+    } else {
+      this.router.navigate(["Index"]);
+    }
+  }
 }
