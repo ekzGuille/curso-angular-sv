@@ -1,5 +1,13 @@
 <H1>
-  Películas <button *ngIf="(film!=undefined)" (click)=reset()> Dejar de ver</button>
+  Películas
+  <button *ngIf="film != undefined" (click)="reset()">Dejar de ver</button>
 </H1>
-<h2 *ngIf="(film!=undefined)">¿Seguro que quieres ver {{film.name}}? <button (click)=ver(film.id)>Si seguro</button></h2>
-<app-single *ngFor="let film of films" [filmInput]='film' (viewEvent)=view($event)></app-single>
+<h2 *ngIf="film != undefined">
+  ¿Seguro que quieres ver {{ film.name }}?
+  <button (click)="ver(film.id)">Si seguro</button>
+</h2>
+<app-single
+  *ngFor="let film of films"
+  [filmInput]="film"
+  (viewEvent)="view($event)"
+></app-single>

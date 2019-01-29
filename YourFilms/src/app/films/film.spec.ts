@@ -1,7 +1,7 @@
-import { Film } from './film';
+import { Film } from "./film";
 
-describe('Film', () => {
-  it('should create an instance', () => {
+describe("Film", () => {
+  it("should create an instance", () => {
     expect(new Film()).toBeTruthy();
   });
 });
