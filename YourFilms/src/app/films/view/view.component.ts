@@ -14,7 +14,7 @@ export class ViewComponent implements OnInit {
   film: Film;
   video: string;
 
-  private player: any;
+  private player: YT.Player;
   private ytEvent: any;
 
   constructor(

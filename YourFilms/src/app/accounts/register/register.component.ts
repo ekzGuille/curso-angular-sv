@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   register(): void {
-    if (!this.accountService.login(this.username, this.password)) {
+    if (!this.accountService.register(this.username, this.password)) {
       alert("Error al registrarse");
     } else {
       this.router.navigate(["Index"]);
